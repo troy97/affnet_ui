@@ -24,7 +24,7 @@ public class AppConfig {
 		//development
 		"/home/anton/workspaceJEE/affnetui/affnetui.properties",
 		//stage, production
-		"/etc/affnetui/affnetui.properties",
+		"/etc/affiliatenetwork/affnetui/affnetui.properties",
 		};
 	
 	private static Logger logger = null;
