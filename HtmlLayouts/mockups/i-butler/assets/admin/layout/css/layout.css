@@ -2552,3 +2552,17 @@ Page Loading
 .double-chart .chart{
   height: 150px !important;
 }
+/* Upload block */
+.upload-block{
+  margin-bottom: 30px; 
+}
+.upload-block h1{
+ margin-top: 0;
+}
+.upload-block .text-error{
+  color: #ff2f07;
+  margin-bottom: 15px;
+}
+.upload-block .btn{
+  border-radius: 5px !important;
+}
