@@ -207,21 +207,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!-- END PAGE HEADER-->
 			<div class="row">
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-12 col-sm-12">
 					<!-- BEGIN PORTLET-->
 					<div class="portlet solid bordered grey-cararra">
 						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-bar-chart-o"></i>Click and orders
-							</div>
-							<div class="actions">
-								<div class="btn-group" data-toggle="buttons">
-									<label class="btn grey-steel btn-sm active">
-									<input type="radio" name="options" class="toggle" id="option1">New</label>
-									<label class="btn grey-steel btn-sm">
-									<input type="radio" name="options" class="toggle" id="option2">Returning</label>
-								</div>
-							</div>
+							<div class="caption">Click and orders</div>
 						</div>
 						<div class="portlet-body">
 							<div id="site_statistics_loading">
@@ -235,23 +225,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!-- END PORTLET-->
 				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-6 col-sm-6">
-					<!-- BEGIN SAMPLE TABLE PORTLET-->
 					<div class="portlet box red">
 						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-cogs"></i>Last 10 orders
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
+							<div class="caption">Last 10 orders</div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-scrollable">
@@ -418,27 +397,45 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 					</div>
-					<!-- END SAMPLE TABLE PORTLET-->
 				</div>
-				
-			</div>
-			<div class="row ">
+				<div class="col-md-6 col-sm-6 double-chart">
+					<div class="portlet box red">
+						<div class="portlet-title">
+							<div class="caption">Current month</div>
+						</div>
+						<div class="portlet-body">
+							<div class="half-block">
+								<h4>Orders</h4>
+								<div id="pie_chart_111" class="chart"></div>
+							</div>
+							<div class="half-block">
+								<h4>Conversion</h4>
+								<div id="pie_chart_222" class="chart"></div>
+							</div>
+						</div>
+					</div>
+					<div class="portlet box purple">
+						<div class="portlet-title">
+							<div class="caption">Prev month</div>
+						</div>
+						<div class="portlet-body">
+							<div class="half-block">
+								<h4>Orders</h4>
+								<div id="pie_chart_333" class="chart"></div>
+							</div>
+							<div class="half-block">
+								<h4>Conversion</h4>
+								<div id="pie_chart_444" class="chart"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
 				<div class="col-md-6 col-sm-6">
 					<div class="portlet box green">
 						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-cogs"></i>Top products visited(wi)
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
+							<div class="caption">Top products visited(wi)</div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-scrollable">
@@ -544,6 +541,20 @@ License: You must have a valid license purchased only from themeforest(the above
 										makr124
 									</td>
 								</tr>
+								<tr>
+									<td>
+										 Larry
+									</td>
+									<td>
+										 Cooper
+									</td>
+									<td>
+										 lar
+									</td>
+									<td>
+										makr124
+									</td>
+								</tr>
 								</tbody>
 								</table>
 							</div>
@@ -553,19 +564,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-6 col-sm-6">
 					<div class="portlet box purple">
 						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-cogs"></i>Top growing sales
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
+							<div class="caption">Top growing sales</div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-scrollable">
@@ -643,136 +642,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 					</div>
 				</div>
-			</div>		
-			<div class="row">
-				<div class="col-md-6 col-sm-6 double-chart">
-					<div class="portlet box purple">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Current month
-							</div>
-							<div class="tools">
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="half-block">
-								<h4>Orders</h4>
-								<div id="pie_chart_111" class="chart"></div>
-							</div>
-							<div class="half-block">
-								<h4>Conversion</h4>
-								<div id="pie_chart_222" class="chart"></div>
-							</div>
-							
-						</div>
-					</div>
-					<div class="portlet box purple">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Prev month
-							</div>
-							<div class="tools">
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="half-block">
-								<h4>Orders</h4>
-								<div id="pie_chart_333" class="chart"></div>
-							</div>
-							<div class="half-block">
-								<h4>Conversion</h4>
-								<div id="pie_chart_444" class="chart"></div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<!-- BEGIN REGIONAL STATS PORTLET-->
-					<div class="portlet">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-globe"></i>Regional Stats
-							</div>
-							<div class="tools">
-								<a href="" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="" class="reload">
-								</a>
-								<a href="" class="fullscreen">
-								</a>
-								<a href="" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="region_statistics_loading">
-								<img src="assets/admin/layout/img/loading.gif" alt="loading"/>
-							</div>
-							<div id="region_statistics_content" class="display-none">
-								<div class="btn-toolbar margin-bottom-10">
-									<div class="btn-group" data-toggle="buttons">
-										<a href="" class="btn default btn-sm active">
-										Users </a>
-										<a href="" class="btn default btn-sm">
-										Orders </a>
-									</div>
-									<div class="btn-group pull-right">
-										<a href="" class="btn default btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-										Select Region <span class="fa fa-angle-down">
-										</span>
-										</a>
-										<ul class="dropdown-menu pull-right">
-											<li>
-												<a href="javascript:;" id="regional_stat_world">
-												World </a>
-											</li>
-											<li>
-												<a href="javascript:;" id="regional_stat_usa">
-												USA </a>
-											</li>
-											<li>
-												<a href="javascript:;" id="regional_stat_europe">
-												Europe </a>
-											</li>
-											<li>
-												<a href="javascript:;" id="regional_stat_russia">
-												Russia </a>
-											</li>
-											<li>
-												<a href="javascript:;" id="regional_stat_germany">
-												Germany </a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div id="vmap_world" class="vmaps display-none">
-								</div>
-								<div id="vmap_usa" class="vmaps display-none">
-								</div>
-								<div id="vmap_europe" class="vmaps display-none">
-								</div>
-								<div id="vmap_russia" class="vmaps display-none">
-								</div>
-								<div id="vmap_germany" class="vmaps display-none">
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- END REGIONAL STATS PORTLET-->
-          	</div>
+			</div>
 		</div>
-	</div>
 	</div>
 </div>
 <!--[if lt IE 9]>
