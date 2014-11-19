@@ -45,7 +45,7 @@ public class PieDataController extends HttpServlet {
 
 				JSONObject ordersCancelled = new JSONObject();
 				ordersCancelled.put("label", "Cancelled");
-				ordersCancelled.put("data", 21);
+				ordersCancelled.put("data", 15);
 
 				result.add(ordersTotal);
 				result.add(ordersCancelled);
@@ -56,7 +56,7 @@ public class PieDataController extends HttpServlet {
 
 				JSONObject ordersConfirmed = new JSONObject();
 				ordersConfirmed.put("label", "Orders");
-				ordersConfirmed.put("data", 102);
+				ordersConfirmed.put("data", 61);
 
 				result.add(clicks);
 				result.add(ordersConfirmed);
@@ -69,7 +69,7 @@ public class PieDataController extends HttpServlet {
 
 				JSONObject ordersCancelled = new JSONObject();
 				ordersCancelled.put("label", "Cancelled");
-				ordersCancelled.put("data", 52);
+				ordersCancelled.put("data", 20);
 
 				result.add(ordersTotal);
 				result.add(ordersCancelled);
@@ -80,7 +80,7 @@ public class PieDataController extends HttpServlet {
 
 				JSONObject ordersConfirmed = new JSONObject();
 				ordersConfirmed.put("label", "Orders");
-				ordersConfirmed.put("data", 210);
+				ordersConfirmed.put("data", 45);
 
 				result.add(clicks);
 				result.add(ordersConfirmed);
