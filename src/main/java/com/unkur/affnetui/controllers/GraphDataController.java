@@ -48,13 +48,13 @@ public class GraphDataController extends HttpServlet {
 		};
 		
 		long[][] orders = new long[][]{
-				{today, 5L},
-				{today-day, 4L},
-				{today-day*2, 6L},
+				{today, 10L},
+				{today-day, 32L},
+				{today-day*2, 10L},
 				{today-day*3, 5L},
-				{today-day*4, 6L},
-				{today-day*5, 5L},
-				{today-day*6, 5L},
+				{today-day*4, 15L},
+				{today-day*5, 7L},
+				{today-day*6, 6L},
 		};
 		
 		

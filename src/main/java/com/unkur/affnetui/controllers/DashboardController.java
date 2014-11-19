@@ -2,6 +2,7 @@ package com.unkur.affnetui.controllers;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -85,6 +86,13 @@ public class DashboardController extends HttpServlet {
 		System.out.println("Top growing products: " + topGrowingProducts);
 		request.setAttribute("topGrowingProducts", topGrowingProducts);
 		
+		List<Product> topProductsVisited = getMostVisited(session);
+		request.setAttribute("topProductsVisited", topProductsVisited);
+		List<Integer> visitsDay = getVisitsDay();
+		request.setAttribute("visitsDay", visitsDay);
+		List<Integer> visitsWeek = getVisitsWeek(visitsDay);
+		request.setAttribute("visitsWeek", visitsWeek);
+		
 		
 
 		
@@ -104,6 +112,26 @@ public class DashboardController extends HttpServlet {
 	
 	
 	
+	
+	private List<Integer> getVisitsDay() {
+		List<Integer> result = new ArrayList<Integer>();
+		Random r = new Random(34);
+		for(int i = 0; i<10; i++) {
+			result.add(7 + r.nextInt(15));
+		}
+		Collections.sort(result);
+		Collections.reverse(result);
+		return result;
+	}
+	
+	private List<Integer> getVisitsWeek(List<Integer> day) {
+		List<Integer> result = new ArrayList<Integer>();
+		Random r = new Random(34);
+		for(int i = 0; i<10; i++) {
+			result.add(day.get(i)*7 + r.nextInt(14));
+		}
+		return result;
+	}
 	
 	/**
 	 * Returns list of 7 integers representing click spread
@@ -136,12 +164,11 @@ public class DashboardController extends HttpServlet {
 		return result;
 	}
 	
-	private Set<Product> getMostVisited(Session s) {
-		Set<Product> result = new LinkedHashSet<>();
-		Random r = new Random();
+	private List<Product> getMostVisited(Session s) {
+		List<Product> result = new ArrayList<>();
+		long[] ids = new long[]{108, 93, 243, 237, 194, 297, 315, 7, 297, 251};
 		for(int i = 0; i<10; i++) {
-			long id = 1+r.nextInt(400);
-			result.add( (Product) s.get(Product.class, id) );
+			result.add( (Product) s.get(Product.class, ids[i]) );
 		}
 		return result;
 	}
