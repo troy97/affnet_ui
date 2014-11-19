@@ -100,7 +100,8 @@ public class UserUploadController extends HttpServlet {
 		request.setAttribute("uploadMoreLink", Urls.USER_UPLOAD_PAGE_URL);
 		request.setAttribute("viewLastFiles", Urls.VIEW_LAST_FILES_PAGE_URL);
 
-		request.getRequestDispatcher(Links.USER_DOWNLOAD_SUCCESS_JSP).forward(request, response);
+		response.sendRedirect(Urls.USER_UPLOAD_PAGE_URL);
+		//request.getRequestDispatcher(Links.USER_DOWNLOAD_SUCCESS_JSP).forward(request, response);
 		logger.debug("Response sent. Return.");
 	}
 

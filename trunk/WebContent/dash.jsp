@@ -62,7 +62,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<div class="sidebar-logout-wrapper">
 				<span class="welcome">Welcome <span class="user-name">${user.firstName}</span></span>
-				<a href="javascript:;">
+				<a href="${logoutPage}">
 					<i class="icon-logout"></i>
 				</a>
 			</div>
@@ -84,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li class="active">
-							<a href="index.html">
+							<a href="${dashPage}">
 							<i class="fa fa-eye"></i>
 							Overview</a>
 						</li>
@@ -156,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							Upload orders</a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="${userUploadPage}">
 							<i class="glyphicon glyphicon-refresh"></i>
 							Synchronization</a>
 						</li>
@@ -592,7 +592,7 @@ jQuery(document).ready(function() {
    
    //TODO replace url
    $.ajax({
-	   'url': '/affnetui/pieData?name=orders&period=current',
+	   'url': '/affnetui/pieData?name=orders&period=previous',
 	   'dataType': 'json',
 	   'success': function(data, textStatus, jqXHR) {
 		   $.plot('#pie_chart_333', data, {

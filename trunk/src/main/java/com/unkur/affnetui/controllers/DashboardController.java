@@ -22,6 +22,7 @@ import org.hibernate.Transaction;
 
 import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
+import com.unkur.affnetui.config.Urls;
 import com.unkur.affnetui.entity.Click;
 import com.unkur.affnetui.entity.Order;
 import com.unkur.affnetui.entity.Product;
@@ -93,12 +94,14 @@ public class DashboardController extends HttpServlet {
 		List<Integer> visitsWeek = getVisitsWeek(visitsDay);
 		request.setAttribute("visitsWeek", visitsWeek);
 		
-		
 
 		
 		tx.commit();
 		
 		//set attributes
+		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
+		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
+		request.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
 		
 		
 		//render page
