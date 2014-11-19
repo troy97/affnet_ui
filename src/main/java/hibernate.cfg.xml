@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+	<property name="connection.driver_class">org.postgresql.Driver</property>
+
+	<!-- Assume test is the database name -->
+	<property name="connection.url">
+		jdbc:postgresql://localhost/affiliatenetwork_db
+	</property>
+	<property name="connection.username">
+		affiliatenetwork_db_user
+	</property>
+	<property name="connection.password">
+		affiliatenetwork_db_password
+	</property>
+
+	<!-- List of XML mapping files -->
+	<!-- <mapping resource="ShopSource.hbm.xml" /> -->
+	<mapping class="com.unkur.affnetui.entity.ShopSource"></mapping>
+	<mapping class="com.unkur.affnetui.entity.Shop"></mapping>
+	<mapping class="com.unkur.affnetui.entity.User"></mapping>
+	<mapping class="com.unkur.affnetui.entity.Admin"></mapping>
+	<mapping class="com.unkur.affnetui.entity.UploadedFile"></mapping>
+	<mapping class="com.unkur.affnetui.entity.Order"></mapping>
+	<mapping class="com.unkur.affnetui.entity.Click"></mapping>
+	<mapping class="com.unkur.affnetui.entity.Product"></mapping>
+
+   </session-factory>
+</hibernate-configuration>
