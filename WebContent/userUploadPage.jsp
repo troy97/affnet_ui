@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<%-- <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" /> --%>
 <fmt:setLocale value="${language}" />
 <fmt:setBundle basename="${bundleBasename}" />
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-sidebar-wrapper">
 		<div class="page-sidebar navbar-collapse collapse">
 			<div class="page-logo">
-				<a href="index.html">
+				<a href="#">
 					<img src="assets/admin/layout/img/beta-logo.png" alt="logo" class="logo-default"/>
 				</a>
 			</div>
@@ -78,12 +78,11 @@ License: You must have a valid license purchased only from themeforest(the above
 				</a>
 			</div>
 			<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-				<li class="start active open">
+				<li>
 					<a href="javascript:;">
 					<i class="icon-graph"></i>
 					<span class="title"><fmt:message key="sideBar.statistics" /></span>
-					<span class="selected"></span>
-					<span class="arrow open"></span>
+					<span class="arrow"></span>
 					</a>
 					<ul class="sub-menu">
 						<li class="active">
@@ -141,11 +140,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-link"></i>
 					<span class="title"><fmt:message key="sideBar.integration" /></span>
-					<span class="arrow "></span>
+					<span class="selected"></span>
+					<span class="arrow open"></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
@@ -197,17 +197,17 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-content-wrapper">
 		<div class="page-content">
 			<h3 class="page-title">
-			Dashboard <small>reports & statistics</small>
+			<fmt:message key="userUpload.header" />
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="index.html">Home</a>
+						<a href="index.html"><fmt:message key="sideBar.home" /></a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#">Dashboard</a>
+						<a href="#"><fmt:message key="sideBar.integration" /></a>
 					</li>
 				</ul>
 			</div>

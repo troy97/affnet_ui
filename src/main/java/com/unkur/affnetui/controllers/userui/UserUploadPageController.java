@@ -44,8 +44,8 @@ public class UserUploadPageController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//get session and user object (this request has passed Auth filter)
-		HttpSession session = (HttpSession) request.getSession();
-		User user = (User) session.getAttribute(Links.SESSION_USER_ATTR_NAME);
+		HttpSession httpSession = (HttpSession) request.getSession();
+		User user = (User) httpSession.getAttribute(Links.SESSION_USER_ATTR_NAME);
 		
 		//check if it's the first attempt,
 		//if not, put "wrong" notification to dataModel
@@ -75,8 +75,13 @@ public class UserUploadPageController extends HttpServlet {
 		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
 		request.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
 		
-		request.setAttribute("language", request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME));
-		request.setAttribute("bundleBasename", Config.BUNDLE_BASENAME);
+		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME);
+		if(language != null) {
+			httpSession.setAttribute("language", language);
+		}
+		//request.setAttribute("language", request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME));
+		//request.setAttribute("bundleBasename", Config.BUNDLE_BASENAME);
+		
 		
 		
 		//send response to outputStrem

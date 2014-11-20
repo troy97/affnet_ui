@@ -35,7 +35,6 @@ public class Urls {
 	public static final String ADMIN_AREA_NAME = "admin/";
 	
 	//url-mapping
-	public static final String MAIN_PAGE_URL = 					SERVICE_NAME + MainPageController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String STATUS_PAGE_URL = 				SERVICE_NAME + StatusPageController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String UI_FILE_REQUEST_CONTROLLER_URL = SERVICE_NAME + UiFileRequestController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String CHECK_LOGIN_URL =				SERVICE_NAME + CheckLoginController.class.getAnnotation(WebServlet.class).value()[0];
@@ -57,6 +56,7 @@ public class Urls {
 	public static final String USER_CABINET_PAGE_URL = USER_DASHBOARD_PAGE_URL;			//SERVICE_NAME + UserCabinetPageController.class.getAnnotation(WebServlet.class).value()[0];
 	
 	
+	public static final String MAIN_PAGE_URL = 	SIGNIN_PAGE_URL;	//SERVICE_NAME + MainPageController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String ADMIN_UI_MAIN_PAGE_URL = ADMIN_UPLOAD_PAGE_URL;
 	public static final String USER_UI_MAIN_PAGE_URL = USER_DASHBOARD_PAGE_URL;
 	

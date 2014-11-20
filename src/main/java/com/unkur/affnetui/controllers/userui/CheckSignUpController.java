@@ -18,6 +18,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.google.common.base.Throwables;
+import com.unkur.affnetui.config.Config;
 import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
 import com.unkur.affnetui.config.Urls;
@@ -150,6 +151,11 @@ public class CheckSignUpController extends HttpServlet {
 		//register OK, create new Session and attach this user to it
 		HttpSession httpSession = (HttpSession) request.getSession(true);
 		httpSession.setAttribute(Links.SESSION_USER_ATTR_NAME, freshUser);
+		
+		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME);
+		httpSession.setAttribute("language", language);
+		//request.setAttribute("language", request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME));
+		httpSession.setAttribute("bundleBasename", Config.BUNDLE_BASENAME);
 
 		//redirect to upload page
 		response.sendRedirect(Urls.USER_UI_MAIN_PAGE_URL);
