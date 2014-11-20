@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import com.unkur.affnetui.config.Config;
 import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
 import com.unkur.affnetui.config.Urls;
@@ -90,6 +91,11 @@ public class CheckSignInController extends HttpServlet {
 		//login OK, create new Session and attach this admin to it
 		HttpSession session = (HttpSession) request.getSession(true);
 		session.setAttribute(Links.SESSION_USER_ATTR_NAME, freshUser);
+		
+		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME);
+		session.setAttribute("language", language);
+		//request.setAttribute("language", request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME));
+		session.setAttribute("bundleBasename", Config.BUNDLE_BASENAME);
 
 		//redirect to upload page
 		logger.debug("Successfull sign in of \"" + email + "\"");

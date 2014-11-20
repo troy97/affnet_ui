@@ -37,6 +37,7 @@
 					<form class="form-signin" action="${checkSignIn}" method="POST">
 						<input type="email" class="form-control" placeholder=<fmt:message key="signIn.emailPlaceholder" /> required autofocus name="${email}">
 						<input type="password" class="form-control" placeholder=<fmt:message key="signIn.passwordPlaceholder" /> required name="${password}">
+						<input type="hidden" class="form-control" name="language" value="${language}">
 						<button class="btn btn-lg btn-primary btn-block" type="submit"><fmt:message key="signIn.signInButton" /></button>
 						<label class="checkbox pull-left"><fmt:message key="signIn.notRegisteredYet" /></label>
 						<a href="${signUpPage}?language=${language}" class="pull-right need-help"><fmt:message key="signIn.signUpLink" /></a><span class="clearfix"></span>

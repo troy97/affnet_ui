@@ -1,0 +1,79 @@
+lang_list,en,ru
+signIn.title,Sign In,Авторизация
+signIn.welcome,Sign In to continue to Affiliate Network,"Авторизуйтесь, чтобы продолжить работу с сервисом"
+signIn.emailPlaceholder,Email,Email
+signIn.passwordPlaceholder,Password,Пароль
+signIn.signInButton,Sign In,Подтвердить
+signIn.notRegisteredYet,Not registered yet?,Еще не зарегистрированы?
+signIn.signUpLink,Sign Up,Регистрация
+signIn.wrongCredentials,"Wrong credentials, please try again.",Неправильные логин или пароль.
+,,
+signUp.title,Sign Up,Регистрация
+signUp.signInLink,Sign In,Авторизоваться
+signUp.headMessage,Enter registration data into the fields below:,Введите Ваши регистрационные данные:
+signUp.asterisksMessage,fields marked with asterisks are mandatory,поля помеченные звездочкой обязательны к заполнению
+signUp.shopName,Shop name,Название магазина
+signUp.shopNamePlaceholder,My shop name,Мой магазин
+signUp.shopUrl,Shop URL,URL магазина
+signUp.shopUrlPlaceholder,www.my-shop.com,www.my-shop.com
+signUp.email,E-mail,E-mail
+signUp.emailPlaceholder,mymail@example.com,mymail@example.com
+signUp.password,Password,Пароль
+signUp.passwordPlaceholder,password,Мой пароль
+signUp.firstName,First name,Имя
+signUp.firstNamePlaceholder,First Name,Моё имя
+signUp.lastName,Last name,Фамилия
+signUp.lastNamePlaceholder,Last Name,Моя фамилия
+signUp.buttonText,Sign Up,Подтвердить
+,,
+sideBar.welcome,Welcome,Здравствуйте
+sideBar.statistics,Statistics,Статистика
+sideBar.overview,Overview,Обзор
+sideBar.orders,Orders,Заказы
+sideBar.clicks,Clicks,Клики
+sideBar.notifications,Notifications,Сообщения
+sideBar.unread,Unread,Новые
+sideBar.archive,Archive,Архивные
+sideBar.accounting,Accounting,Финансы
+sideBar.history,History,Истроия
+sideBar.addMoney,Add money,Пополнить счет
+sideBar.integration,Integration,Интеграция
+sideBar.uploadProducts,Upload products,Загрузить продукты
+sideBar.uploadOrders,Upload orders,Загрузить заказы
+sideBar.synch,Synchronization,Синхронизация
+sideBar.settings,Settings,Настройки
+sideBar.profileInfo,Profile info,Профиль
+sideBar.emailNotif,E-mail notifications,Сообщения почты
+sideBar.merchantDocs,Merchant Documentation,Документация
+sideBar.home,Home,Дом
+,,
+userUpload.header,File upload,Загрузка файлов
+userUpload.upload,Upload,Загрузка файлов
+userUpload.uploadInvitation,Upload your price-list file,Загрузите ваш прайс-лист
+userUpload.chooseFile,Choose file to upload (only .csv and .yml formats accepted),Выберите файл для загрузки на сервер (поддерживаются только форматы .csv и  .yml )
+userUpload.fileNamePlaceholder,file not choosen,файл не выбран
+userUpload.uploadButton,Upload,Загрузить
+userUpload.lastFiles,Last 10 files You have uploaded,Последние 10 загруженных файлов
+userUpload.row1,Name,Имя
+userUpload.row2,Products count,Кол-во товаров
+userUpload.row3,Upload time,Время загрузки
+userUpload.row4,Size in bytes,Размер в байтах
+userUpload.row5,Validity,Валидность
+userUpload.row6,Activity,Активность
+userUpload.row7,Validation message,Сообщение валидации
+,,
+dash.header,Statistics,Статистика
+dash.graphName,Clicks and orders,Клики и заказы
+dash.last10orders,Last 10 orders,Последние 10 заказов
+dash.currentMonthStat,Current month statistics,Статистика текущего месяца
+dash.previousMonthStat,Previous month statistics,Статистика предыдущего месяца
+dash.ordersTotal,Orders (total,Заказы (всего
+dash.conversion,Conversion,Конверсия
+dash.topProductsVisited,Top products visited,Самые посещаемые товары
+dash.topGrowingSales,Top growing sales,Товары с растущей популярностью
+dash.rowTime,Time,Время
+dash.rowStatus,Status,Статус
+dash.rowTitle,Title,Название
+dash.rowPrice,Price,Цена
+dash.rowVisitsLastDay,Visits last day,Кликов за день
+dash.rowVisitsLastWeek,Visits last week,Кликов за неделю

@@ -31,7 +31,8 @@ public class MainPageController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher(Links.MAIN_PAGE_JSP).forward(request, response);
+		response.sendRedirect(Urls.SIGNIN_PAGE_URL);
+		//request.getRequestDispatcher(Links.MAIN_PAGE_JSP).forward(request, response);
 	}
 
 	/**

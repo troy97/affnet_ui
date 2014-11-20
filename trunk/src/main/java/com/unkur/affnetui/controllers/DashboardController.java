@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.unkur.affnetui.config.Config;
 import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
 import com.unkur.affnetui.config.Urls;
@@ -102,8 +103,15 @@ public class DashboardController extends HttpServlet {
 		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
 		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
 		request.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
-		request.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
 		request.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
+		request.setAttribute("name", user.getFirstName());
+		
+		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME);
+		if(language != null) {
+			httpsession.setAttribute("language", language);
+		}
+		//request.setAttribute("language", request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME));
+		//request.setAttribute("bundleBasename", Config.BUNDLE_BASENAME);
 		
 		//render page
 		request.getRequestDispatcher("/dash.jsp").forward(request, response);

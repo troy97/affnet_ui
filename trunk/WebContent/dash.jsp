@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="${bundleBasename}" />
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
@@ -16,12 +18,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html lang="${language}">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>i-Butler AffNet</title>
+<title>i-Butler AffiliNet</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
@@ -56,21 +58,21 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-sidebar-wrapper">
 		<div class="page-sidebar navbar-collapse collapse">
 			<div class="page-logo">
-				<a href="index.html">
+				<a href="#">
 					<img src="assets/admin/layout/img/beta-logo.png" alt="logo" class="logo-default"/>
 				</a>
 			</div>
 			<div class="sidebar-logout-wrapper">
-				<span class="welcome">Welcome <span class="user-name">${user.firstName}</span></span>
+				<span class="welcome"><fmt:message key="sideBar.welcome" /> <span class="user-name">${name}</span></span>
 				<a href="${logoutPage}">
 					<i class="icon-logout"></i>
 				</a>
 			</div>
 			<div class="language-switcher">
-				<a href="javascript:;">
+				<a href="?language=en">
 					<i class="icon-eng"></i>
 				</a>
-				<a href="javascript:;">
+				<a href="?language=ru">
 					<i class="icon-ru"></i>
 				</a>
 			</div>
@@ -78,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-graph"></i>
-					<span class="title">Statistics</span>
+					<span class="title"><fmt:message key="sideBar.statistics" /></span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
@@ -86,105 +88,106 @@ License: You must have a valid license purchased only from themeforest(the above
 						<li class="active">
 							<a href="${dashPage}">
 							<i class="fa fa-eye"></i>
-							Overview</a>
+							<fmt:message key="sideBar.overview" /></a>
 						</li>
 						<li>
 							<a href="#">
 							<i class="icon-basket"></i>
-							Orders</a>
+							<fmt:message key="sideBar.orders" /></a>
 						</li>
 						<li>
 							<a href="#">
 							<i class=" fa fa-hand-o-up"></i>
-							Clicks</a>
+							<fmt:message key="sideBar.clicks" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="fa fa-exclamation"></i>
-					<span class="title">Notifications</span>
+					<span class="title"><fmt:message key="sideBar.notifications" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
 							<a href="#">
 							<i class="icon-envelope"></i>
-							Unread</a>
+							<fmt:message key="sideBar.unread" /></a>
 						</li>
 						<li>
 							<a href="#">
 							<i class="fa fa-file-archive-o"></i>
-							Archive</a>
+							<fmt:message key="sideBar.archive" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-docs"></i>
-					<span class="title">Accounting</span>
+					<span class="title"><fmt:message key="sideBar.accounting" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
 							<a href="#">
 								<i class="glyphicon glyphicon-book"></i>
-							History</a>
+							<fmt:message key="sideBar.history" /></a>
 						</li>
 						<li>
 							<a href="#">
 								<i class="glyphicon glyphicon-plus-sign"></i>
-							Add money</a>
+							<fmt:message key="sideBar.addMoney" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-link"></i>
-					<span class="title">Integration</span>
-					<span class="arrow "></span>
+					<span class="title"><fmt:message key="sideBar.integration" /></span>
+					
+					<span class="arrow"></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="#">
+							<a href="${userUploadPage}">
 							<i class="icon-handbag"></i>
-							Upload products</a>
+							<fmt:message key="sideBar.uploadProducts" /></a>
 						</li>
 						<li>
 							<a href="#">
 							<i class="icon-tag"></i>
-							Upload orders</a>
+							<fmt:message key="sideBar.uploadOrders" /></a>
 						</li>
 						<li>
-							<a href="${userUploadPage}">
+							<a href="#">
 							<i class="glyphicon glyphicon-refresh"></i>
-							Synchronization</a>
+							<fmt:message key="sideBar.synch" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-settings"></i>
-					<span class="title">Settings</span>
+					<span class="title"><fmt:message key="sideBar.settings" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
 							<a href="${updateProfilePage}">
 							<i class="icon-user"></i>
-							Profile info</a>
+							<fmt:message key="sideBar.profileInfo" /></a>
 						</li>
 						<li>
 							<a href="#">
 							<i class="icon-envelope-open"></i>
-							E-mail notifications</a>
+							<fmt:message key="sideBar.emailNotif" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">
 					<i class="icon-book-open"></i>
-					<span class="title">Merchant documentation</span>
+					<span class="title"><fmt:message key="sideBar.merchantDocs" /></span>
 					</a>
 				</li>
 			</ul>
@@ -194,17 +197,17 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-content-wrapper">
 		<div class="page-content">
 			<h3 class="page-title">
-			Statistics <small> </small>
+			<fmt:message key="dash.header" />
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="index.html">Home</a>
+						<a href="index.html"><fmt:message key="sideBar.home" /></a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#">Statistics</a>
+						<a href="#"><fmt:message key="sideBar.statistics" /></a>
 					</li>
 				</ul>
 			</div>
@@ -214,7 +217,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- BEGIN PORTLET-->
 					<div class="portlet solid bordered grey-cararra">
 						<div class="portlet-title">
-							<div class="caption">Clicks and orders</div>
+							<div class="caption"><fmt:message key="dash.graphName" /></div>
 						</div>
 						<div class="portlet-body">
 							<div id="site_statistics_loading">
@@ -233,7 +236,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-6 col-sm-6">
 					<div class="portlet box red">
 						<div class="portlet-title">
-							<div class="caption">Last 10 orders</div>
+							<div class="caption"><fmt:message key="dash.last10orders" /></div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-scrollable">
@@ -241,16 +244,16 @@ License: You must have a valid license purchased only from themeforest(the above
 								<thead>
 								<tr>
 									<th>
-										Time
+										<fmt:message key="dash.rowTime" />
 									</th>
 									<th>
-										Status
+										<fmt:message key="dash.rowStatus" />
 									</th>
 									<th>
-										Title
+										<fmt:message key="dash.rowTitle" />
 									</th>
 									<th>
-										Price &euro;
+										<fmt:message key="dash.rowPrice" /> &euro;
 									</th>
 								</tr>
 								</thead>
@@ -278,30 +281,30 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-6 col-sm-6 double-chart">
 					<div class="portlet box red">
 						<div class="portlet-title">
-							<div class="caption">Current month statistics</div>
+							<div class="caption"><fmt:message key="dash.currentMonthStat" /></div>
 						</div>
 						<div class="portlet-body">
 							<div class="half-block">
-								<h4>Orders (total 312)</h4>
+								<h4><fmt:message key="dash.ordersTotal" /> 312)</h4>
 								<div id="pie_chart_111" class="chart"></div>
 							</div>
 							<div class="half-block">
-								<h4>Conversion</h4>
+								<h4><fmt:message key="dash.conversion" /></h4>
 								<div id="pie_chart_222" class="chart"></div>
 							</div>
 						</div>
 					</div>
 					<div class="portlet box purple">
 						<div class="portlet-title">
-							<div class="caption">Previous month statistics</div>
+							<div class="caption"><fmt:message key="dash.previousMonthStat" /></div>
 						</div>
 						<div class="portlet-body">
 							<div class="half-block">
-								<h4>Orders (total 278)</h4>
+								<h4><fmt:message key="dash.ordersTotal" /> 278)</h4>
 								<div id="pie_chart_333" class="chart"></div>
 							</div>
 							<div class="half-block">
-								<h4>Conversion</h4>
+								<h4><fmt:message key="dash.conversion" /></h4>
 								<div id="pie_chart_444" class="chart"></div>
 							</div>
 						</div>
@@ -312,7 +315,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-6 col-sm-6">
 					<div class="portlet box green">
 						<div class="portlet-title">
-							<div class="caption">Top products visited</div>
+							<div class="caption"><fmt:message key="dash.topProductsVisited" /></div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-scrollable">
@@ -320,16 +323,16 @@ License: You must have a valid license purchased only from themeforest(the above
 								<thead>
 								<tr>
 									<th>
-										Title
+										<fmt:message key="dash.rowTitle" />
 									</th>
 									<th>
-										Visits last day
+										<fmt:message key="dash.rowVisitsLastDay" />
 									</th>
 									<th>
-										Visits last week
+										<fmt:message key="dash.rowVisitsLastWeek" />
 									</th>
 									<th>
-										Price &euro;
+										<fmt:message key="dash.rowPrice" /> &euro;
 									</th>
 								</tr>
 								</thead>
@@ -351,7 +354,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-6 col-sm-6">
 					<div class="portlet box purple">
 						<div class="portlet-title">
-							<div class="caption">Top growing sales</div>
+							<div class="caption"><fmt:message key="dash.topGrowingSales" /></div>
 						</div>
 						<div class="portlet-body">
 							<div class="table-scrollable">
@@ -359,10 +362,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<thead>
 								<tr>
 									<th>
-										Title
+										<fmt:message key="dash.rowTitle" />
 									</th>
 									<th>
-										Price &euro;
+										<fmt:message key="dash.rowPrice" /> &euro;
 									</th>
 								</tr>
 								</thead>
