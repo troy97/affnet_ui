@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -56,7 +57,12 @@ public class UiFileRequestController extends HttpServlet {
 		Path queryPath = FileSystems.getDefault().getPath(queryStr);
 		
 		//path to bootstrap folder
-		Path bootstrapPath = FileSystems.getDefault().getPath(AppConfig.getInstance().getWithEnv("WebContentPath") + "/bootstrap");
+		//If this folder is on file system
+		//Path bootstrapPath = FileSystems.getDefault().getPath(AppConfig.getInstance().getWithEnv("WebContentPath") + "/bootstrap");
+		//If inside .war file
+		ServletContext ctx = request.getServletContext();
+	    Path bootstrapPath = FileSystems.getDefault().getPath( ctx.getRealPath(AppConfig.getInstance().getWithEnv("UiFilesPath")) );
+	    
 		//full path to file = bootstrap path + queryPath
 		Path filePath = bootstrapPath.resolve(queryPath);
 		

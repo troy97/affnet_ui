@@ -12,7 +12,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-import com.unkur.affnetui.config.FsPaths;
 import com.unkur.affnetui.controllers.StatusEndpoint;
 
 /**

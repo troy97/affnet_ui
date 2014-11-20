@@ -20,7 +20,13 @@ public class HibernateUtil {
             // Create the SessionFactory from hibernate.cfg.xml
         	Configuration cfg = new Configuration();
         	ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
-            return cfg.configure().buildSessionFactory();
+        	cfg = cfg.configure();
+            cfg.setProperty("hibernate.connection.url", Config.DB_URL);
+            cfg.setProperty("hibernate.connection.username", Config.DB_USER);
+            cfg.setProperty("hibernate.connection.password", Config.DB_PASSWORD);
+            cfg.setProperty("hibernate.connection.driver_class", Config.DB_DRIVER_CLASS);
+            cfg.setProperty("hibernate.dialect", Config.DB_HIBERNATE_DIALECT);
+            return cfg.buildSessionFactory();
         }
         catch (Exception e) {
             // Make sure you log the exception, as it might be swallowed

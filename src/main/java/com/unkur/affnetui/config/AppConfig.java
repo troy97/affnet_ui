@@ -76,12 +76,12 @@ public class AppConfig {
 	 * Initialize application
 	 */
 	private static void init() {
-		new File(FsPaths.UPLOAD_FOLDER).mkdir();
-		if(!new File(FsPaths.WEB_CONTENT_FOLDER).exists()) {
+		new File(Config.UPLOAD_FOLDER).mkdir();
+/*		if(!new File(FsPaths.WEB_CONTENT_FOLDER).exists()) {
 			System.out.println("WebContent folder not found in " + FsPaths.WEB_CONTENT_FOLDER);
 			logger.error("WebContent folder not found in " + FsPaths.WEB_CONTENT_FOLDER);
 			System.exit(1);
-		}
+		}*/
 	}
 	
 	/**

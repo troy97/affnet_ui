@@ -1,7 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="${bundleBasename}" />
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
@@ -17,7 +19,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html lang="${language}">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
@@ -62,16 +64,16 @@ License: You must have a valid license purchased only from themeforest(the above
 				</a>
 			</div>
 			<div class="sidebar-logout-wrapper">
-				<span class="welcome">Welcome <span class="user-name">${name}</span></span>
+				<span class="welcome"><fmt:message key="sideBar.welcome" /> <span class="user-name">${name}</span></span>
 				<a href="${logoutPage}">
 					<i class="icon-logout"></i>
 				</a>
 			</div>
 			<div class="language-switcher">
-				<a href="javascript:;">
+				<a href="?language=en">
 					<i class="icon-eng"></i>
 				</a>
-				<a href="javascript:;">
+				<a href="?language=ru">
 					<i class="icon-ru"></i>
 				</a>
 			</div>
@@ -79,113 +81,113 @@ License: You must have a valid license purchased only from themeforest(the above
 				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-graph"></i>
-					<span class="title">Statistics</span>
+					<span class="title"><fmt:message key="sideBar.statistics" /></span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
 					<ul class="sub-menu">
 						<li class="active">
-							<a href="${dashPage}">
+							<a href="${dashPage}?language=${language}">
 							<i class="fa fa-eye"></i>
-							Overview</a>
+							<fmt:message key="sideBar.overview" /></a>
 						</li>
 						<li>
-							<a href="index_2.html">
+							<a href="#">
 							<i class="icon-basket"></i>
-							Orders</a>
+							<fmt:message key="sideBar.orders" /></a>
 						</li>
 						<li>
-							<a href="index_3.html">
+							<a href="#">
 							<i class=" fa fa-hand-o-up"></i>
-							Clicks</a>
+							<fmt:message key="sideBar.clicks" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="fa fa-exclamation"></i>
-					<span class="title">Notifications</span>
+					<span class="title"><fmt:message key="sideBar.notifications" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="ecommerce_index.html">
+							<a href="#">
 							<i class="icon-envelope"></i>
-							Unread</a>
+							<fmt:message key="sideBar.unread" /></a>
 						</li>
 						<li>
-							<a href="ecommerce_orders.html">
+							<a href="#">
 							<i class="fa fa-file-archive-o"></i>
-							Archive</a>
+							<fmt:message key="sideBar.archive" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-docs"></i>
-					<span class="title">Accounting</span>
+					<span class="title"><fmt:message key="sideBar.accounting" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="#">
 								<i class="glyphicon glyphicon-book"></i>
-							History</a>
+							<fmt:message key="sideBar.history" /></a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 								<i class="glyphicon glyphicon-plus-sign"></i>
-							Add money</a>
+							<fmt:message key="sideBar.addMoney" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-link"></i>
-					<span class="title">Integration</span>
+					<span class="title"><fmt:message key="sideBar.integration" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="#">
 							<i class="icon-handbag"></i>
-							Upload products</a>
+							<fmt:message key="sideBar.uploadProducts" /></a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 							<i class="icon-tag"></i>
-							Upload orders</a>
+							<fmt:message key="sideBar.uploadOrders" /></a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 							<i class="glyphicon glyphicon-refresh"></i>
-							Synchronization</a>
+							<fmt:message key="sideBar.synch" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-settings"></i>
-					<span class="title">Settings</span>
+					<span class="title"><fmt:message key="sideBar.settings" /></span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="${updateProfilePage}?language=${language}">
 							<i class="icon-user"></i>
-							Profile info</a>
+							<fmt:message key="sideBar.profileInfo" /></a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 							<i class="icon-envelope-open"></i>
-							E-mail notifications</a>
+							<fmt:message key="sideBar.emailNotif" /></a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="javascript:;">
+					<a href="#">
 					<i class="icon-book-open"></i>
-					<span class="title">Merchant documentation</span>
+					<span class="title"><fmt:message key="sideBar.merchantDocs" /></span>
 					</a>
 				</li>
 			</ul>
@@ -213,17 +215,17 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class="upload-block">
-						<h1>Upload your price-list file:</h1>
+						<h1><fmt:message key="userUpload.uploadInvitation" />:</h1>
 						<p class="text-error">
 							<font color="red"> ${badFileFormat} </font>
 						</p>
 						<p>
 							<form action="${downloadPage}" enctype="multipart/form-data" method="post" id="uploadform">
-								Choose file to upload (only .csv and .yml formats accepted)
+								<fmt:message key="userUpload.chooseFile" />
 								<input type="hidden" name="webshopname" value="${shopId}">  <!-- ######################## DONT FORGET TO ADD THIS ATTR ####################################### -->
 								<input type="file" name="datafile" size="40">
 								<br/>
-								<button class="btn btn-lg btn-primary" type="submit"><span class="glyphicon glyphicon-open"></span> Upload</button>
+								<button class="btn btn-lg btn-primary" type="submit"><span class="glyphicon glyphicon-open"></span> <fmt:message key="userUpload.uploadButton" /></button>
 							</form>
 						</p>
 					</div>
@@ -235,7 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet box green">
 						<div class="portlet-title">
 							<div class="caption">
-								Last 10 files You have uploaded
+								<fmt:message key="userUpload.lastFiles" />
 							</div>
 						</div>
 						<div class="portlet-body">
@@ -244,25 +246,25 @@ License: You must have a valid license purchased only from themeforest(the above
 								<thead>
 								<tr>
 									<th>
-										Name
+										<fmt:message key="userUpload.row1" />
 									</th>
 									<th>
-										Products count
+										<fmt:message key="userUpload.row2" />
 									</th>
 									<th>
-										Upload time
+										<fmt:message key="userUpload.row3" />
 									</th>
 									<th>
-										Size in bytes
+										<fmt:message key="userUpload.row4" />
 									</th>
 									<th>
-										Validity
+										<fmt:message key="userUpload.row5" />
 									</th>
 									<th>
-										Activity
+										<fmt:message key="userUpload.row6" />
 									</th>
 									<th>
-										Validation Message
+										<fmt:message key="userUpload.row7" />
 									</th>
 								</tr>
 								</thead>

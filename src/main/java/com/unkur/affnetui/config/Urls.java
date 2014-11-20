@@ -52,9 +52,9 @@ public class Urls {
 	public static final String USER_UPLOAD_PAGE_URL = 			SERVICE_NAME + UserUploadPageController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String CHECK_UPDATE_PROFILE_URL =		SERVICE_NAME + CheckUpdateProfileController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String UPDATE_USER_PROFILE_PAGE_URL =   SERVICE_NAME + UpdateUserProfileController.class.getAnnotation(WebServlet.class).value()[0];
-	public static final String USER_CABINET_PAGE_URL = 			SERVICE_NAME + UserCabinetPageController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String VIEW_LAST_FILES_PAGE_URL = 		SERVICE_NAME + ViewLastFilesPageController.class.getAnnotation(WebServlet.class).value()[0];
 	public static final String USER_DASHBOARD_PAGE_URL = 		SERVICE_NAME + DashboardController.class.getAnnotation(WebServlet.class).value()[0];
+	public static final String USER_CABINET_PAGE_URL = USER_DASHBOARD_PAGE_URL;			//SERVICE_NAME + UserCabinetPageController.class.getAnnotation(WebServlet.class).value()[0];
 	
 	
 	public static final String ADMIN_UI_MAIN_PAGE_URL = ADMIN_UPLOAD_PAGE_URL;

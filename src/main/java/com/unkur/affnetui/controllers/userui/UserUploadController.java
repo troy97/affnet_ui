@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.unkur.affnetui.ValidationException;
-import com.unkur.affnetui.config.FsPaths;
+import com.unkur.affnetui.config.Config;
 import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
 import com.unkur.affnetui.config.Urls;
@@ -64,7 +64,7 @@ public class UserUploadController extends HttpServlet {
 		UploadedFile uploadedFile = null;
 		try {
 			//InputStream is closed inside
-			uploadedFile = new MultipartDownloader().download(request.getInputStream(), request.getHeader("Content-Type"), FsPaths.UPLOAD_FOLDER);
+			uploadedFile = new MultipartDownloader().download(request.getInputStream(), request.getHeader("Content-Type"), Config.UPLOAD_FOLDER);
 		} catch (ValidationException | IOException e) {
 			logger.debug("Download failure: " + e);
 			response.sendRedirect(Urls.USER_UPLOAD_PAGE_URL + Links.createQueryString(Links.ERROR_PARAM_NAME));

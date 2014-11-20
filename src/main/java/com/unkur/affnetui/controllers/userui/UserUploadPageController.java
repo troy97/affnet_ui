@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import com.unkur.affnetui.config.AppConfig;
+import com.unkur.affnetui.config.Config;
 import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
 import com.unkur.affnetui.config.Urls;
@@ -72,6 +73,10 @@ public class UserUploadPageController extends HttpServlet {
 		request.setAttribute("name", user.getFirstName());
 		request.setAttribute("shopId", user.getShopId());
 		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
+		request.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
+		
+		request.setAttribute("language", request.getParameter(Links.LANGUAGE_PARAM_NAME) == null ? "en" : request.getParameter(Links.LANGUAGE_PARAM_NAME));
+		request.setAttribute("bundleBasename", Config.BUNDLE_BASENAME);
 		
 		
 		//send response to outputStrem
