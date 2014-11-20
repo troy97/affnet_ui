@@ -2566,3 +2566,38 @@ Page Loading
 .upload-block .btn{
   border-radius: 5px !important;
 }
+.update-profil-page .btn{
+  border-radius: 5px !important;
+}
+.update-profil-page .btn i{
+  margin-right: 5px;
+  display: inline-block;
+}
+.come-back{
+    text-align: center;
+}
+.come-back h2{
+    text-align: center;
+}
+.come-back .btn{
+  margin-top: 15px;
+  border-radius: 5px !important;
+}
+.update-profile-success{
+  text-align: center;
+}
+.update-profile-success td{
+  width: 50%;
+  text-align: center;
+}
+.update-profile-success td:first-child{
+  font-weight: bold;
+}
+.update-profile-success .btn{
+  margin-top: 15px;
+  border-radius: 5px !important;
+}
+.update-profile-success .btn i{
+  margin-right: 5px;
+  display: inline-block;
+}
