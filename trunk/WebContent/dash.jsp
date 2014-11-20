@@ -89,12 +89,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							Overview</a>
 						</li>
 						<li>
-							<a href="index_2.html">
+							<a href="#">
 							<i class="icon-basket"></i>
 							Orders</a>
 						</li>
 						<li>
-							<a href="index_3.html">
+							<a href="#">
 							<i class=" fa fa-hand-o-up"></i>
 							Clicks</a>
 						</li>
@@ -108,12 +108,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="ecommerce_index.html">
+							<a href="#">
 							<i class="icon-envelope"></i>
 							Unread</a>
 						</li>
 						<li>
-							<a href="ecommerce_orders.html">
+							<a href="#">
 							<i class="fa fa-file-archive-o"></i>
 							Archive</a>
 						</li>
@@ -127,12 +127,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="#">
 								<i class="glyphicon glyphicon-book"></i>
 							History</a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 								<i class="glyphicon glyphicon-plus-sign"></i>
 							Add money</a>
 						</li>
@@ -146,12 +146,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="#">
 							<i class="icon-handbag"></i>
 							Upload products</a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 							<i class="icon-tag"></i>
 							Upload orders</a>
 						</li>
@@ -170,19 +170,19 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="${updateProfilePage}">
 							<i class="icon-user"></i>
 							Profile info</a>
 						</li>
 						<li>
-							<a href="index_horizontal_menu.html">
+							<a href="#">
 							<i class="icon-envelope-open"></i>
 							E-mail notifications</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="javascript:;">
+					<a href="#">
 					<i class="icon-book-open"></i>
 					<span class="title">Merchant documentation</span>
 					</a>

@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 
 import com.unkur.affnetui.config.AppConfig;
-import com.unkur.affnetui.config.FsPaths;
 import com.unkur.affnetui.filters.RequestCountingFilter;
 
 /**

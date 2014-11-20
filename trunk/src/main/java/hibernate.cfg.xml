@@ -5,19 +5,10 @@
 <hibernate-configuration>
    <session-factory>
     <property name="hibernate.current_session_context_class">thread</property>
-    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-	<property name="connection.driver_class">org.postgresql.Driver</property>
+    
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.use_sql_comments">false</property>
 
-	<!-- Assume test is the database name -->
-	<property name="connection.url">
-		jdbc:postgresql://localhost/affiliatenetwork_db
-	</property>
-	<property name="connection.username">
-		affiliatenetwork_db_user
-	</property>
-	<property name="connection.password">
-		affiliatenetwork_db_password
-	</property>
 
 	<!-- List of XML mapping files -->
 	<!-- <mapping resource="ShopSource.hbm.xml" /> -->

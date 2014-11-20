@@ -102,7 +102,8 @@ public class DashboardController extends HttpServlet {
 		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
 		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
 		request.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
-		
+		request.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
+		request.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
 		
 		//render page
 		request.getRequestDispatcher("/dash.jsp").forward(request, response);
