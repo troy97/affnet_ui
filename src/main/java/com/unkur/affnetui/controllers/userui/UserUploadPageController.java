@@ -66,14 +66,8 @@ public class UserUploadPageController extends HttpServlet {
 		}
 		
 		request.setAttribute("fileList", files);
-		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
 		request.setAttribute("downloadPage", Urls.USER_UPLOAD_CONTROLLER_URL);
-		request.setAttribute("uploadPage", Urls.USER_UPLOAD_PAGE_URL);
-		request.setAttribute("cabinetPage", Urls.USER_CABINET_PAGE_URL);
-		request.setAttribute("name", user.getFirstName());
 		request.setAttribute("shopId", user.getShopId());
-		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
-		request.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
 		
 		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME);
 		if(language != null) {

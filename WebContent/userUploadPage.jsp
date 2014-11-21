@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li class="active">
-							<a href="${dashPage}?language=${language}">
+							<a href="${dashPage}">
 							<i class="fa fa-eye"></i>
 							<fmt:message key="sideBar.overview" /></a>
 						</li>
@@ -173,7 +173,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="${updateProfilePage}?language=${language}">
+							<a href="${updateProfilePage}">
 							<i class="icon-user"></i>
 							<fmt:message key="sideBar.profileInfo" /></a>
 						</li>

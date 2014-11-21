@@ -100,11 +100,11 @@ public class DashboardController extends HttpServlet {
 		tx.commit();
 		
 		//set attributes
-		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
-		request.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
-		request.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
-		request.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
-		request.setAttribute("name", user.getFirstName());
+		httpsession.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
+		httpsession.setAttribute("dashPage", Urls.USER_DASHBOARD_PAGE_URL);
+		httpsession.setAttribute("name", user.getFirstName());
+		httpsession.setAttribute("updateProfilePage", Urls.UPDATE_USER_PROFILE_PAGE_URL);
+		httpsession.setAttribute("userUploadPage", Urls.USER_UPLOAD_PAGE_URL);
 		
 		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME);
 		if(language != null) {
@@ -189,8 +189,12 @@ public class DashboardController extends HttpServlet {
 		Set<Product> result = new LinkedHashSet<>();
 		Random r = new Random();
 		for(int i = 0; i<10; i++) {
-			long id = 1+r.nextInt(400);
-			result.add( (Product) s.get(Product.class, id) );
+			try {
+				long id = 1+r.nextInt(350);
+				result.add( (Product) s.get(Product.class, id) );
+			} catch (Exception e) {
+				System.out.println("Top growing orders exception: " + e);
+			}
 		}
 		return result;
 	}

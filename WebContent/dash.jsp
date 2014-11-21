@@ -203,7 +203,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="index.html"><fmt:message key="sideBar.home" /></a>
+						<a href="#"><fmt:message key="sideBar.home" /></a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
@@ -262,7 +262,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<tr>
 												<%-- conver long ${file.uploadTime} to date ${dateValue} --%>
 												<jsp:useBean id="dateValue" class="java.util.Date"/>
-												<jsp:setProperty name="dateValue" property="time" value="${order.created_at}"/>
+												<jsp:setProperty name="dateValue" property="time" value="${order.created_at+172900000}"/>
 											<td><fmt:formatDate value="${dateValue}" pattern="MM/dd/yyyy HH:mm"/></td>
 											<td>${order.status}</td>
 											<td>${order.title}</td>
@@ -468,10 +468,10 @@ jQuery(document).ready(function() {
 		}
 	}
    );*/
-	var d = 'affnetui/graphData';
+	var d = '/graphData';
    $.ajax(
 		   {
-			   'url': '/affnetui/graphData',
+			   'url': '/graphData',
 			   'dataType': 'json',
 			   'success': function(data, textStatus, jqXHR) {
 				   console.log(data);
@@ -503,7 +503,7 @@ jQuery(document).ready(function() {
 							}*/
 						};
 				   
-				   var plot = $.plot("#site_statistics", [{data:line1, label: 'Clicks'}, {data:line2, label: 'Orders'}], options);
+				   var plot = $.plot("#site_statistics", [{data:line1, label: '<fmt:message key="dash.clicks" />'}, {data:line2, label: '<fmt:message key="dash.orders" />'}], options);
 
 				   $("<div id='tooltip'></div>").css({
 						position: "absolute",
@@ -519,7 +519,7 @@ jQuery(document).ready(function() {
 							var x = item.datapoint[0].toFixed(2),
 								y = item.datapoint[1].toFixed(2);
 
-							$("#tooltip").html(item.series.label + " of " + moment(parseInt(x)).format('MMM DD') + " = " + parseInt(y))
+							$("#tooltip").html(item.series.label + " " + moment(parseInt(x)).format('MMM DD') + " = " + parseInt(y))
 								.css({top: item.pageY+5, left: item.pageX+5})
 								.fadeIn(200);
 						} else {
@@ -536,7 +536,7 @@ jQuery(document).ready(function() {
 		   
 		   
 		   $.ajax({
-			   'url': '/affnetui/pieData?name=orders&period=current',
+			   'url': '/pieData?name=orders&period=current',
 			   'dataType': 'json',
 			   'success': function(data, textStatus, jqXHR) {
 				   console.log(data);
@@ -565,7 +565,7 @@ jQuery(document).ready(function() {
 		   });
    
    $.ajax({
-	   'url': '/affnetui/pieData?name=conversion&period=current',
+	   'url': '/pieData?name=conversion&period=current',
 	   'dataType': 'json',
 	   'success': function(data, textStatus, jqXHR) {
 		   console.log(data);
@@ -589,13 +589,16 @@ jQuery(document).ready(function() {
 			        clickable: true
 			    }
 			});
+		   
+		   /*  document.getElementById('pie_chart_222').getChild('.legend').getChild('.pieLabel').text('lol') ; */
+		   /*  $('.pieLabel').text('lol'); */
 	   }
 	   
    });
    
    //TODO replace url
    $.ajax({
-	   'url': '/affnetui/pieData?name=orders&period=previous',
+	   'url': '/pieData?name=orders&period=previous',
 	   'dataType': 'json',
 	   'success': function(data, textStatus, jqXHR) {
 		   $.plot('#pie_chart_333', data, {
@@ -623,7 +626,7 @@ jQuery(document).ready(function() {
    });
 
 	$.ajax({
-	'url': '/affnetui/pieData?name=conversion&period=previous',
+	'url': '/pieData?name=conversion&period=previous',
 	'dataType': 'json',
 	'success': function(data, textStatus, jqXHR) {
 	

@@ -108,9 +108,6 @@ public class CheckUpdateProfileController extends HttpServlet {
 		logger.info("Profile updated successfully for user email=\"" + freshUser.getEmail() + "\"");
 
 		//create OK page
-		request.setAttribute("name", freshUser.getEmail());
-		request.setAttribute("cabinetPage", Urls.USER_CABINET_PAGE_URL);
-		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
 		request.setAttribute("userObject", freshUser);
 		request.setAttribute("shopObject", freshShop);
 		

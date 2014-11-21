@@ -46,7 +46,8 @@ public class LogoutPageController extends HttpServlet {
 		request.setAttribute("goodByeMessage", AppConfig.getInstance().get("goodByeMessage"));
 		request.setAttribute("mainPage", Urls.MAIN_PAGE_URL);
 		
-		request.getRequestDispatcher(Links.LOGOUT_PAGE_JSP).forward(request, response);
+		response.sendRedirect(Urls.SIGNIN_PAGE_URL);
+		//request.getRequestDispatcher(Links.LOGOUT_PAGE_JSP).forward(request, response);
 	}
 
 	/**
