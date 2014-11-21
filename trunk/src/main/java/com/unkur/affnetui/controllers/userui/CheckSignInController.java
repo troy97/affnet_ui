@@ -19,10 +19,6 @@ import com.unkur.affnetui.config.HibernateUtil;
 import com.unkur.affnetui.config.Links;
 import com.unkur.affnetui.config.Urls;
 import com.unkur.affnetui.controllers.StatusEndpoint;
-import com.unkur.affnetui.dao.UserDao;
-import com.unkur.affnetui.dao.exceptions.DbAccessException;
-import com.unkur.affnetui.dao.exceptions.NoSuchEntityException;
-import com.unkur.affnetui.dao.impl.UserDaoImpl;
 import com.unkur.affnetui.entity.User;
 import com.unkur.affnetui.utils.Encrypter;
 

@@ -77,3 +77,26 @@ dash.rowTitle,Title,Название
 dash.rowPrice,Price,Цена
 dash.rowVisitsLastDay,Visits last day,Кликов за день
 dash.rowVisitsLastWeek,Visits last week,Кликов за неделю
+dash.clicks,Clicks,Клики
+dash.orders,Orders,Заказы
+,,
+updateProfile.header,Profile,Профиль
+updateProfile.welcome,Profile info,Персональные данные
+updateProfile.message,You can change your personal data here.,Здесь Вы можете изменить свои персональные данные.
+updateProfile.shopName,Shop name,Название магазина
+updateProfile.shopUrl,Shop URL,URL магазина
+updateProfile.email,E-mail,E-mail
+updateProfile.password,Password,Пароль
+updateProfile.firstName,First name,Имя
+updateProfile.lastName,Last name,Фамилия
+updateProfile.button,Update,Подтвердить
+,,
+updateProfileOk.header,Profile,Профиль
+updateProfileOk.welcome,"Your profile was updated successfully, current info is","Профиль успешно обновлен, акутальная информация"
+updateProfileOk.shopName,Shop name,Название магазина
+updateProfileOk.shopUrl,Shop URL,URL магазина
+updateProfileOk.email,E-mail,E-mail
+updateProfileOk.password,Password,Пароль
+updateProfileOk.firstName,First name,Имя
+updateProfileOk.lastName,Last name,Фамилия
+updateProfileOk.button,Back,Назад

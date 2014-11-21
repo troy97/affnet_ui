@@ -29,8 +29,8 @@ public class Urls {
 	private static AppConfig cfg = AppConfig.getInstance();
 	
 	//service root name
-	//public static final String DOMAIN_NAME = cfg.getWithEnv("DOMAIN_NAME");
-	public static final String SERVICE_NAME = "/affnetui";
+	//public static final String SERVICE_NAME = "/affnetui";
+	public static final String SERVICE_NAME = "";
 	public static final String USER_AREA_NAME = "user/";
 	public static final String ADMIN_AREA_NAME = "admin/";
 	

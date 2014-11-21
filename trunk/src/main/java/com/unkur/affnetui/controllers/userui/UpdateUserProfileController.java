@@ -44,8 +44,8 @@ public class UpdateUserProfileController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//get session and user object (this request has passed Auth filter)
-		HttpSession session = (HttpSession) request.getSession();
-		User user = (User) session.getAttribute(Links.SESSION_USER_ATTR_NAME);
+		HttpSession httpSession = (HttpSession) request.getSession();
+		User user = (User) httpSession.getAttribute(Links.SESSION_USER_ATTR_NAME);
 		
 		Shop shop = null;
 		HibernateUtil.getCurrentSession().beginTransaction();
@@ -63,11 +63,7 @@ public class UpdateUserProfileController extends HttpServlet {
 		//if not, put "wrong" notification to dataModel
 		checkErrorParams(request);
 		
-		request.setAttribute("name", user.getEmail());
-
 		request.setAttribute("checkUpdate", Urls.CHECK_UPDATE_PROFILE_URL);
-		request.setAttribute("cabinetPage", Urls.USER_CABINET_PAGE_URL);
-		request.setAttribute("logoutPage", Urls.LOGOUT_PAGE_URL);
 
 		request.setAttribute("email", Links.EMAIL_PARAM_NAME);
 		request.setAttribute("password", Links.PASSWORD_PARAM_NAME);
@@ -78,6 +74,12 @@ public class UpdateUserProfileController extends HttpServlet {
 
 		request.setAttribute("shopObject", shop);
 		request.setAttribute("userObject", user);
+		
+		
+		String language = request.getParameter(Links.LANGUAGE_PARAM_NAME);
+		if(language != null) {
+			httpSession.setAttribute("language", language);
+		}
 		
 		//render login page
 		request.getRequestDispatcher(Links.UPDATE_USER_PROFILE_JSP).forward(request, response);
