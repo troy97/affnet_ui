@@ -2,7 +2,7 @@
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
 
 <head>
 	<title></title>
@@ -84,35 +84,30 @@
      <div class="container_full">
     		
         <header>
-        
+            <div class="language-switcher">
+                <a href="">
+                    <i class="icon-eng"></i>
+                </a>
+                <a href="">
+                    <i class="icon-ru"></i>
+                </a>
+            </div>
             <!-- Logo -->
-            <div class="logo"><a href="#home" data-scroll><img src="images/logo.png" alt="" /></a></div>
+            <div class="logo">
+                <a href="#home" data-scroll><img src="images/logo.png" alt="" /></a>
+            </div>
             
             <!-- Menu -->
             <div class="menu_main">
-            <div class="additional-menu">
-                <ul class="languages">
-                    <li><a href="#">DE</a></li>
-                    <li><a href="#" class="active">EN</a></li>
-                    <li><a href="#">RU</a></li>
-                    <li><a href="#">CZ</a></li>
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">GR</a></li>
-                </ul>
-                <div class="sing-in-block">
-                    <span class="sing-in-icon"></span>
-                    <span>Sing-in</span>
-                </div>
-            </div>
             <nav class="nav-collapse">
                 <ul>
                   <li class="active"><a href="#оverview" data-scroll><i class="fa fa-circle"></i>overview</a></li>
                   <li><a href="#agency-sing-up" data-scroll><i class="fa fa-circle"></i>Advertiser/Agency sing-up</a></li>
                   <li><a href="#publisher-sing-up" data-scroll><i class="fa fa-circle"></i>Publisher sing-up</a></li>
                   <li><a href="#contact" data-scroll><i class="fa fa-circle"></i>Contact</a></li>
+                  <li><a href="#"><i class="fa fa-circle"></i>Sing-in</a></li>
                 </ul>
             </nav>
-            
             
             </div><!-- end menu -->  
         
@@ -128,11 +123,11 @@
 
 <div class="clearfix"></div>
 
-<div class="sectionarea" id="оverview">
+<div id="оverview">
       
-    <!-- Slider start -->  
+
 	<div class="ms-fullscreen-template promo-slider" id="slider1-wrapper">
-		<!-- masterslider -->
+
 		<div class="master-slider ms-skin-default" id="masterslider">
 		    
              <div class="ms-slide slide-1" data-delay="5">
@@ -193,13 +188,9 @@
                 </div>
             </div>
 
-
-           
-            
-
 		</div>
 
-	</div><!-- end of slider -->      
+	</div>     
       
 </div>
 
@@ -295,18 +286,13 @@
                     <input type="text" id="text">
                 </div>
             </div>
-        <section>
-        <div class="btn-row">
-             <button type="submit" class="button">Submit</button>
-        </div>
+            <div class="btn-row">
+                 <button type="submit" class="btn">Submit</button>
+            </div>
+        </section>
     </form>
-    
-   
-    
-    
-    
 </div>
-</div><!-- end about section -->
+</div>
 
 <div class="clearfix"></div>
     
@@ -486,6 +472,9 @@
                     <input type="password" id="text">
                 </div>
             </div>
+            <div class="btn-row">
+                <button type="submit" class="btn">Submit</button>
+        </div>
         </section>
         <section>
             <h3 class="section-title">Complete application</h3>
@@ -498,7 +487,7 @@
         </section>
     </form>
 </div>
-</div><!-- end contact section -->
+</div>
 
 <div class="clearfix"></div>
 
@@ -544,14 +533,13 @@
     </ul>
     
     <div class="clearfix"></div>
-    <div class="margin_top3"></div>
-    
+
     © 2014. Hoxa. All rights reserved.
 
 </div>
-</div><!-- end copyrights section -->
+</div>
 
-<a href="#" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
+<a href="#" class="scrollup">Scroll</a>
 
 </div>
 

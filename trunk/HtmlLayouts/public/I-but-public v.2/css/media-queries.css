@@ -1,0 +1,53 @@
+@media screen and (max-width: 700px) {
+	.header{
+		padding: 28px 0px;
+	}
+	.logo{
+		float: none;
+		text-align: center;
+		clear: both;
+		margin: 0 auto;
+	}
+	.menu{
+		float: none;
+		text-align: center;
+		clear: both;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+	}
+}
+@media screen and (max-width: 430px) {
+.header{
+	padding: 28px 0px;
+}
+.logo{
+	float: none;
+	text-align: center;
+	clear: both;
+	margin: 0 auto;
+}
+.menu{
+	float: none;
+	text-align: center;
+	clear: both;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	min-width: 430px;
+}
+.menu_nav a{
+	padding-left: 18px;
+}
+.right_slesh:after{
+	padding-left:18px;
+}
+.promo_slogan{
+	min-width: 430px;
+}
+.white_blok h2{
+	
+	min-width: 430px;
+}
+.white_blok p{
+	min-width: 430px;
+	}
+}
