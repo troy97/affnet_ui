@@ -11,28 +11,17 @@ body{font:12px/28px ;}
 #header.sticky #trueHeader{position:fixed;top:0}
 #header.sticky.condensed #trueHeader{padding:0px 0}
 
-@media only screen and (min-width: 768px) and (max-width: 999px){
-
-.menu_main {
-	padding: 8px 0px;
-}
-
-}
-
-
 @media only screen and (min-width: 480px) and (max-width: 767px){
-	
-.menu_main {
-	padding: 0px 0px 0px 0px;
-}
-	
-}
 
+    .menu_main {
+        padding: 0px 0px 0px 0px;
+    }
+	
+}
 @media only screen and (max-width: 479px){
 
 .menu_main {
 	padding: 0px 0px 0px 0px;
 }
 
-	
 }
