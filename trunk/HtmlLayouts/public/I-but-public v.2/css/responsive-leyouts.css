@@ -5,20 +5,6 @@
 		width: 1000px;
 		margin: auto;
 	}
-	.nav-collapse a {
-		padding: 15px 15px !important;
-		line-height: 19px;
-		font-size: 12px;
-	}
-	.logo img {
-		height: 50px;
-	}
-	.container_full {
-		height: 70px;
-	}
-	.menu_main {
-		float: right;
-	}
 	#оverview{
 		display: none;
 	}
@@ -30,19 +16,8 @@
 		width: 748px;
 		margin: auto;
 	}
-	.nav-collapse a {
-		padding: 5px 15px !important;
-		line-height: 19px;
-		font-size: 12px;
-	}
 	.nav-collapse i{
 		display: none;
-	}
-	.logo img {
-		height: 50px !important;
-	}
-	.container_full {
-		height: 70px;
 	}
 	.footer .logo-wrap{
 		float: none;
@@ -53,6 +28,16 @@
 	}
 	#оverview{
 		display: none;
+	}
+	.nav-collapse a {
+		padding: 5px 5px !important;
+		line-height: 19px;
+		font-size: 12px;
+	}
+	.languages{
+		position: absolute;
+		top: 0;
+		right: 52px;
 	}
 }
 
@@ -71,9 +56,6 @@
 		padding: 5px 5px !important;
 		line-height: 19px;
 		font-size: 12px;
-	}
-	.logo img {
-		height: 50px;
 	}
 	.container_full {
 		height: 70px;
@@ -104,6 +86,11 @@
 	}
 	#оverview{
 		display: none;
+	}
+	.languages{
+		position: absolute;
+		top: 0;
+		right: 52px;
 	}
 }
 
@@ -157,4 +144,14 @@
 	.copyrights ul {
   		width: 276px;
   	}
+  	.nav-collapse a {
+		padding: 5px 5px !important;
+		line-height: 19px;
+		font-size: 12px;
+	}
+	.languages{
+		position: absolute;
+		top: 0;
+		right: 52px;
+	}
 }
