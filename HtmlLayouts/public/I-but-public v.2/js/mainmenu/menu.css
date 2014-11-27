@@ -133,6 +133,9 @@
 /* ------------------------------------------
   NAVIGATION STYLES
 --------------------------------------------- */
+.nav-collapse{
+ float: left !important; 
+}
 
 .fixed {
   position: fixed;
@@ -157,10 +160,11 @@
 
 @media screen and (min-width: 1000px) {
   .nav-collapse {
-    float: right;
+    float: left;
     width: auto;
   }
 }
+
 
 .nav-collapse li {
   float: left;
@@ -173,16 +177,6 @@
   }
 }
 
-.nav-collapse a {
-/*  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  border-top: 1px solid white;
-  text-decoration: none;
-  background: #f4421a;
-  padding: 0.7em 1em;*/
-  color: #272727;
-  width: 100%;
-  float: left;
-}
 
 .nav-collapse a:active,
 .nav-collapse .active a {
@@ -198,11 +192,16 @@
 }
 
   .nav-collapse a {
-    padding: 25px 15px;
+    padding: 15px 15px;
+    line-height: 19px;
+    font-size: 12px;
     text-align: center;
     border-top: 0;
     float: left;
     margin: 0;
+    color: #272727;
+    width: 100%;
+    float: left;
   }
 
 
