@@ -2611,15 +2611,27 @@ Page Loading
    cursor: pointer;
    text-align: center;
 }
+.balance-column{
+  width: 50%;
+  float: left;
+}
+.balance-block{
+  overflow: hidden;
+}
+.balance-block{
+  text-align: center;
+}
 .balance{
   text-align: center;
   display: block;
   color: #cc5152;
   font-size: 26px;
   font-family: serif;
-  margin: 10px 0;
+  margin: 20px 0;
   font-weight: bold;
-
+}
+.suggested-balance{
+  color: #009900 !important;
 }
 .balance-label{
 text-align: center;
@@ -2695,6 +2707,51 @@ margin-bottom: 10px;
     border-color: #0f0;
 }
 
-.add-payment{
 
+.order-list{
+  list-style: none;
+  font-size: 14px;
+  padding: 5px;
+}
+.order-list li{
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.order-list .order-list-label{
+  float: left;
+  width: 180px;
+}
+.order-list-text-box{
+  margin-left: 180px;
+}
+.synchron-details{
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.synchron-details .text-block{
+  padding-left: 20px; 
+  margin-bottom: 20px;
+}
+.synchron-details .text-block p{
+    margin-bottom: 5px;
+}
+.synchron-details .text-block .alert{
+  margin-bottom: 5px;
+  text-align: center;
+  color: #6662ff;
+  font-weight: bold;
+}
+.synchron-details .text-block .alert a{
+  color: #6662ff;
+}
+.synchron-details .text-block .alert:hover a{
+  color: #4554a5;
+}
+.synchron-details .text-block .btn{
+  margin: 20px 0;
+}
+.desc,
+.additional-info{
+  display: none;
 }

@@ -209,26 +209,69 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-12 col-sm-12 synchron-page">
 					<div class="update-profil-page">
 						<div class="portlet-body form">
-							<form role="form">
+							<form role="form" class="synchro-method">
 								<div class="form-body">
 									<h4>Choose synchronization method to use</h4>
 									<div class="form-group">
 										<div class="radio-list">
 											<label>
-											<input type="radio" name="syn_method"/>Send updates to i-butler periodically using i-butler additional-padding </label>
+												<input type="radio" name="group1" value="opt1"/>Send updates to i-butler periodically using i-butler API 
 											<label>
 										</div>
 										<div class="radio-list">
 											<label>
-												<input type="radio" name="syn_method" />Upload date to i-butler periodically using FTP</label>
+												<input type="radio" name="group1" value="opt2"/>Upload date to i-butler periodically using FTP
 											<label>
 										</div>
 										<div class="radio-list">
 											<label>
-												<input type="radio" name="syn_method" />Let I-Butler download data files from your server</label>
+												<input type="radio" name="group1" value="opt3" />Let I-Butler download data files from your server
 											<label>
 										</div>
 									</div>
+								</div>
+							</form>
+							<div id="opt1" class="synchron-details desc">
+								<h4>Send updates to i-butler periodically using i-butler API</h4>
+								<p>Use following endpoints to integrate with i-butler API</p>
+								<div class="text-block">
+									<p>Products API</p>
+									<div class="alert alert-info"><a href="http://i-butler.net/api/products/v2/">http://i-butler.net/api/products/v2/</a></div>
+									<p>Orders API</p>
+									<div class="alert alert-info"><a href="http://i-butler.net/api/orders/v2/">http://i-butler.net/api/orders/v2/</a></div>
+								</div>
+								<p>Your API access credentials</p>
+								<div class="text-block">
+									<p>Access ID:</p>
+									<div class="alert alert-info">dfkljeorifjoeirgjiojerogi</div>
+									<p>Access token:</p>
+									<div class="alert alert-info">jksdfi9384uurip4jt03tjh3p94ut09</div>
+									<a data-toggle="modal" href="#acc_token" class="btn btn-lg blue">Generate new access token</a>
+									<p>Please read <a href="#">API documentation</a> for more details.</p>
+								</div>
+							</div>
+
+							<div id="opt2" class="synchron-details desc">
+								<h4>Upload date to i-butler periodically using FTP</h4>
+								<p>Use following FTP to upload data:</p>
+								<div class="text-block">
+									<p>Products FTP</p>
+									<div class="alert alert-info"><a href="http://i-butler.net/api/products/v2/">http://i-butler.net/api/products/v2/</a></div>
+									<p>Orders FTP</p>
+									<div class="alert alert-info"><a href="http://i-butler.net/api/orders/v2/">http://i-butler.net/api/orders/v2/</a></div>
+								</div>
+								<p>Your FTP access credentials:</p>
+								<div class="text-block">
+									<p>Username:</p>
+									<div class="alert alert-info">dfkljeorifjoeirgjiojerogi</div>
+									<p>Passwordn:</p>
+									<div class="alert alert-info">jksdfi9384uurip4jt03tjh3p94ut09</div>
+									<a data-toggle="modal" href="#ftp_pass" class="btn btn-lg blue">Generate new password</a>
+									<p>Please read <a href="#">FTP synchronization documentation</a> for more details.</p>
+								</div>
+							</div>
+							<form  id="opt3" class="desc" role="form">
+								<div class="form-body">
 									<h4>Synchronization details</h4>
 									<div class="form-group">
 										<label>Orders download Url</label>
@@ -245,19 +288,21 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group">
 										<div class="checkbox-list">
 											<label for="closeButton">
-											<input id="closeButton" type="checkbox" class="input-small"/>Base64 HTTP autentication required </label>
+											<input id="closeButton" type="checkbox" class="input-small add-info-btn"/>Base64 HTTP autentication required </label>
 										</div>
 									</div>
-									<div class="form-group">
-										<label>Username</label>
-										<div class="input-icon right">
-											<input type="text" class="form-control input-circle" placeholder="Username">
+									<div class="additional-info">
+										<div class="form-group">
+											<label>Username</label>
+											<div class="input-icon right">
+												<input type="text" class="form-control input-circle" placeholder="Username">
+											</div>
 										</div>
-									</div>
-									<div class="form-group">
-										<label>Password</label>
-										<div class="input-icon right">
-											<input type="password" class="form-control input-circle" placeholder="******">
+										<div class="form-group">
+											<label>Password</label>
+											<div class="input-icon right">
+												<input type="password" class="form-control input-circle" placeholder="******">
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
@@ -272,7 +317,46 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 					</div>
 				</div>
-			
+				<div class="modal fade" id="acc_token" tabindex="-1" role="acc_token" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+								<h4 class="modal-title">Generate new access token</h4>
+							</div>
+							<div class="modal-body">
+								Are you sure you want to generate new API access token? After new access token is set up you will not be able to access API using old token any more.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn blue">Generate new</button>
+								<button type="button" class="btn default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						<!-- /.modal-content -->
+					</div>
+					<!-- /.modal-dialog -->
+				</div>
+			<!-- /.modal -->
+				<div class="modal fade" id="ftp_pass" tabindex="-1" role="ftp_pass" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+								<h4 class="modal-title">Generate new password</h4>
+							</div>
+							<div class="modal-body">
+								Are you sure you want to generate new FTP password? After new password is set up you will not be able to access FTP using old password any more.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn blue">Generate new</button>
+								<button type="button" class="btn default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						<!-- /.modal-content -->
+					</div>
+					<!-- /.modal-dialog -->
+				</div>
+				<!-- /.modal -->
 			</div>
 		</div>
 	</div>
@@ -316,6 +400,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/admin/layout/scripts/script.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/index.js" type="text/javascript"></script>
